@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #c3e6e9;
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion .content {
+  margin: 10px 20px;
+}
+
+.accordion .content h2 {
+  padding: 1rem;
+  background: #4183b9;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion .content h2::after {
+  font-family: 'xeicon';
+  content: '\e9c5'; /*클릭했을 때 content 내용*/
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+.accordion .content.active h2::after {
+  content: '\e9c1';
+}
+
+.accordion .content .text {
+  padding: 0 10px;
+  background: #fff;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s, padding 0.3s;
+}
+
+.accordion .content.active .text {
+  padding: 20px 10px;
+  height: 100px;
+}

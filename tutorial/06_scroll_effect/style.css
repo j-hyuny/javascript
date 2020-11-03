@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  position: relative;
+  top: 300px;
+  text-align: center;
+  font-size: 60px;
+  z-index: 1;
+}
+
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('./bg.jpg') no-repeat center / cover; /*포지션, 사이즈*/
+  background-attachment: fixed; /*bg 고정*/
+  clip-path: circle(0px at center center); /*이미지에 마스크 적용*/
+}
+
+.container {
+  position: relative;
+  margin-top: 200vh;
+  background: #fff;
+  padding: 100px 300px;
+  z-index: 10;
+}
+
+.contianer h2 {
+  font-size: 36px;
+  margin-bottom: 36px;
+}
+
+.contianer p {
+  padding: 20px 0;
+  margin-bottom: 10px;
+}

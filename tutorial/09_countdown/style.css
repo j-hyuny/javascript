@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 3rem;
+}
+
+.content > p {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#countdown div {
+  background: #111;
+  color: #fff;
+  width: 120px;
+  height: 120px;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 32px;
+}

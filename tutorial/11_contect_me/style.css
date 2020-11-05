@@ -136,11 +136,11 @@
   padding: 20px;
 }
 
-.container .active .dimm {
+.container.active .dimm {
   display: block;
 }
 
-.container .active .modal {
+.container.active .modal {
   opacity: 1;
   pointer-events: initial;
 }

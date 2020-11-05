@@ -1,4 +1,4 @@
-function () {
+function sendMail() {
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements
@@ -59,10 +59,8 @@ function () {
     var formData = getFormData(form)
     var data = formData.data
 
-
-    console.log(data)
-
-    if(data.name ==='' || data.email == '' || data.message === '') {
+    // console.log(data)
+    if (data.name === '' || data.email === '' || data.message === '') {
       alert('이름과 이메일, 내용을 확인하세요!')
       return
     }
@@ -81,7 +79,7 @@ function () {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         form.reset()
-        // 성공후 동작
+        //성공후 동작
         const container = document.querySelector('.container')
         container.classList.add('active')
 
@@ -89,14 +87,6 @@ function () {
         close.addEventListener('click', () => {
           container.classList.remove('active')
         })
-        var formElements = form.querySelector('.form-elements')
-        if (formElements) {
-          formElements.style.display = 'none' // hide form
-        }
-        var thankYouMessage = form.querySelector('.thankyou_message')
-        if (thankYouMessage) {
-          thankYouMessage.style.display = 'block'
-        }
       }
     }
     // url encode form data for sending as post data

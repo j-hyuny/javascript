@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+
+.left {
+  flex-basis: 460px;
+  height: 100%; /*container 100vh 때문에 사용*/
+  background: #079992;
+  padding: 40px;
+  color: #f5fff7;
+}
+
+.left h1 {
+  font-size: 60px;
+  text-transform: uppercase; /*대문자로 변경*/
+  margin-bottom: 1.2rem;
+}
+
+.left p {
+  color: #b6c9ba;
+}
+
+.right {
+  flex: 1; /*나머지공간 모두 사용*/
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right .content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 460px;
+  color: #3c8271;
+}
+
+.right .content h2 {
+  font-size: 36px;
+  color: #0c2461;
+  margin-bottom: 46px;
+}
+
+.gform {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.gform label {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.gform input,
+.gform textarea {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+  background: #f2f7f3;
+  border-radius: 10px;
+  outline: none;
+  color: #99a9af;
+}
+
+.gform input::placeholder,
+.gform textarea::placeholder {
+  color: #b5c5c5;
+}
+
+.gform input:focus,
+.gform textarea:focus {
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+
+.gform textarea {
+  resize: vertical;
+}
+
+.btn {
+  background: #3c8217;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.close {
+  background: #8d496b;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* dimm, modal */
+.dimm {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal span {
+  display: block;
+  font-size: 60px;
+}
+
+.modal p {
+  padding: 20px;
+}
+
+.container .active .dimm {
+  display: block;
+}
+
+.container .active .modal {
+  opacity: 1;
+  pointer-events: initial;
+}

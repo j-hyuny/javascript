@@ -57,9 +57,6 @@ function sendMail() {
   }
 
   function handleFormSubmit(event) {
-    //dimm과 로딩이 먼저 나타난다.
-    dimm.classList.add('active')
-
     // handles form submit without any jquery
     event.preventDefault() // we are submitting via xhr below
     var form = event.target
@@ -70,6 +67,8 @@ function sendMail() {
     if (data.name === '' || data.email === '' || data.message === '') {
       alert('이름과 이메일, 내용을 확인하세요!')
       return
+    } else {
+      dimm.classList.add('active') /*dimm이 세개의 데이터가 있으면 나타남 */
     }
 
     // If a honeypot field is filled, assume it was done so by a spam bot.

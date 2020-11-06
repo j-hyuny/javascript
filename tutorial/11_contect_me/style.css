@@ -113,6 +113,20 @@
   display: none;
 }
 
+/* 로딩아이콘 */
+.dimm i {
+  font-size: 60px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dimm.active {
+  display: block;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -127,6 +141,11 @@
   pointer-events: none;
 }
 
+.modal.active {
+  opacity: 1;
+  pointer-events: initial;
+}
+
 .modal span {
   display: block;
   font-size: 60px;
@@ -134,13 +153,4 @@
 
 .modal p {
   padding: 20px;
-}
-
-.container.active .dimm {
-  display: block;
-}
-
-.container.active .modal {
-  opacity: 1;
-  pointer-events: initial;
 }

@@ -1,3 +1,7 @@
+const dimm = document.querySelector('.dimm')
+const modal = document.querySelector('.modal')
+const close = document.querySelector('.close')
+
 function sendMail() {
   // get all data in form and return object
   function getFormData(form) {
@@ -53,6 +57,9 @@ function sendMail() {
   }
 
   function handleFormSubmit(event) {
+    //dimm과 로딩이 먼저 나타난다.
+    dimm.classList.add('active')
+
     // handles form submit without any jquery
     event.preventDefault() // we are submitting via xhr below
     var form = event.target
@@ -79,13 +86,14 @@ function sendMail() {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         form.reset()
-        //성공후 동작
-        const container = document.querySelector('.container')
-        container.classList.add('active')
 
-        const close = document.querySelector('.close')
+        //성공후 동작
+        modal.classList.add('active')
+        //close를 눌렀을 때
         close.addEventListener('click', () => {
-          container.classList.remove('active')
+          dimm.classList.remove('active') /*dimm이 사라짐 */
+          modal.classList.remove('active') /*modal이 사라짐 */
+          location.reload() /*그상태에서 리프레쉬(f5작용)*/
         })
       }
     }

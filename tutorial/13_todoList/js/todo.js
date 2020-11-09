@@ -2,7 +2,7 @@ const form = document.querySelector('form')
 const input = form.querySelector('input')
 const ul = document.querySelector('.todo_list')
 
-let Todos = []
+let todos = []
 
 // localStorage.setItem('문자열 키', '문자열 값')
 // localStorage.getItem('문자열 키')
@@ -49,6 +49,7 @@ function handleSubmit(e) {
 function loadTodo() {
   // console.log(localStorage.getItem('todos'))
   const loadTodo = localStorage.getItem('todos')
+  console.log(loadTodo)
 
   if (loadTodo !== null) {
     const parseTodo = JSON.parse(loadTodo)

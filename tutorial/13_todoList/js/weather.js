@@ -10,7 +10,7 @@ function getWeather(lat, lon) {
       return response.json()
     })
     .then(function (json) {
-      console.log(json)
+      // console.log(json)
       const name = json.name
       const temp = json.main.temp
 

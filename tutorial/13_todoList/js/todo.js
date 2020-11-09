@@ -27,7 +27,7 @@ function paintTodo(text) {
 
   li.innerText = text
   li.id = todos.length + 1
-  span.innerText = 'X'
+  span.innerText = 'x'
   li.appendChild(span)
   ul.appendChild(li)
 

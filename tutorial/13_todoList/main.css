@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 14px;
+  border: 1px solid #666;
+  outline: none;
+}
+
+input[type='text']::placeholder {
+  color: #666;
+  transition: all 0.3s;
+}
+
+input[type='text']:focus::placeholder {
+  color: transparent;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 60px;
+}
+
+h1 {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+}
+
+.header_extra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0 10px;
+}
+
+.todo_list {
+  list-style: none; /*점 사라짐*/
+}
+
+.todo_list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 6px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.todo_list span {
+  cursor: pointer;
+}
